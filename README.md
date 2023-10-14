@@ -20,7 +20,7 @@ dataframe = pd.read_csv('Credit_Card_Applications.csv')
 dataframe.head()
 dataframe.shape
 dataframe.info()
-dataframe.columns
+dataframe.columns'''
 
 
 ## Importing Dataset
