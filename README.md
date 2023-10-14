@@ -15,6 +15,13 @@ This project demonstrates the use of a Self-Organizing Map (SOM) model to detect
 
 ## Importing Dependencies
 This section imports necessary Python libraries for data analysis, visualization, and the SOM model.
+```python
+dataframe = pd.read_csv('Credit_Card_Applications.csv')
+dataframe.head()
+dataframe.shape
+dataframe.info()
+dataframe.columns
+
 
 ## Importing Dataset
 Load the credit card applications dataset and display some basic information about it.
