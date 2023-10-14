@@ -69,6 +69,7 @@ for i, x in enumerate(X):
          markersize = 10,
          markeredgewidth = 1)
 ```
+![download](https://github.com/RahulRKotte/CreditCard-ApplicationFraudDetection-SOM-Model/assets/123312043/2275e47c-e249-412f-916b-308b361bf251)
 
 ## Finding The Frauds
 Identify the potential frauds using the trained SOM model.
