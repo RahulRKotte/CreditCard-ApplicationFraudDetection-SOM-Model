@@ -1,45 +1,48 @@
 # Credit Card Application Fraud Detection Using SOM Model
 
-This repository contains a Python script for credit card application fraud detection using a Self-Organizing Map (SOM) model. The SOM is used to identify patterns and anomalies in the data, helping to detect fraudulent credit card applications.
+## Overview
+This project demonstrates the use of a Self-Organizing Map (SOM) model to detect credit card application fraud. The SOM is a type of artificial neural network that can help identify patterns and anomalies in the data.
 
-## Dependencies
+## Table of Contents
+- [Dependencies](#importing-dependencies)
+- [Importing Dataset](#importing-dataset)
+- [Feature Scaling](#feature-scaling)
+- [Training SOM](#training-som)
+- [Visualizing the Result](#visualizing-the-result)
+- [Finding The Frauds](#finding-the-frauds)
+- [Finding Customers with Approved Applications](#finding-customers-with-approved-applications)
+- [Customers with Approved Applications Who Are Fraudulent](#customers-with-approved-applications-who-are-fraudulent)
 
-Before running the script, make sure to install the necessary Python dependencies. You can do this using `pip`:
+## Importing Dependencies
+This section imports necessary Python libraries for data analysis, visualization, and the SOM model.
 
-```bash
-pip install numpy pandas matplotlib minisom
-- `numpy` for numerical operations.
-- `pandas` for data manipulation.
-- `matplotlib` for data visualization.
-- `minisom` for the Self-Organizing Map implementation.
+## Importing Dataset
+Load the credit card applications dataset and display some basic information about it.
 
-## Usage
+## Feature Scaling
+Scale the features of the dataset to ensure that they have a consistent range.
 
-1. **Importing and Preprocessing Data**:
-   - The code starts by importing the required libraries and loading the credit card application dataset from the 'Credit_Card_Applications.csv' file.
-   - It then splits the data into features (X) and the target variable (y), performing feature scaling to normalize the data.
+## Training SOM
+Create and train the SOM model using the scaled dataset.
 
-2. **Training Self-Organizing Map (SOM)**:
-   - A Self-Organizing Map (SOM) is created using the `MiniSom` library with a specified grid size.
-   - The SOM's weights are initialized randomly, and it is trained on the dataset for a specified number of iterations.
+## Visualizing the Result
+Visualize the results of the SOM model by plotting the distance map and marking the detected frauds.
 
-3. **Visualizing the Result**:
-   - The code visualizes the SOM's result by plotting a grid and coloring the grid cells based on the distance between neurons.
-   - It also plots data points on the grid to visualize how well the SOM separates different classes.
+## Finding The Frauds
+Identify the potential frauds using the trained SOM model.
 
-4. **Finding The Frauds**:
-   - The script identifies potential fraud cases by mapping data points to their winning neurons on the SOM grid.
-   - It concatenates the frauds found at specific neuron locations and converts them back to the original feature values.
+## Finding Customers with Approved Applications
+Identify customers whose credit card applications were approved.
 
-5. **Identifying Approved Fraud Cases**:
-   - The code filters and identifies customers whose applications were approved (Class = 1) in the dataset.
-   - It then finds customers who are detected as fraud cases by the SOM but still got their applications approved.
+## Customers with Approved Applications Who Are Fraudulent
+Identify customers with approved applications who are also detected as potential fraudsters.
 
-6. **Output**:
-   - The script prints the Customer IDs of all detected fraud cases and those who had their applications approved despite being identified as fraud.
+## Conclusion
+This project demonstrates the use of a SOM model to detect credit card application fraud and identify customers with approved applications who are potential fraudsters.
 
-## Credits
+Feel free to modify the code and adapt it for your specific needs.
 
-- This code uses the `MiniSom` library for Self-Organizing Maps.
-- Dataset source: Find it in the repository
+**Note:** Ensure that you have the 'Credit_Card_Applications.csv' dataset in the same directory as your code.
 
+## License
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
